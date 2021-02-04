@@ -7,24 +7,17 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>Hello from HTML!</h1>
+    <h1>To Do List</h1>
     <div id="app">
-      <h2>{{ message }}</h2>
-      <!-- <span v-if="seen">Now you see me</span>
       <ol>
-        <li v-for="todo in todos">
-          {{ todo.text }}
-        </li>
-      </ol>
-      <p>{{ message }}</p> -->
-      <button v-on:click="reverseMessage">Reverse Message</button>
+      <li v-for="todo in todos">
+        {{ todo }}
+      </li>
+      <input v-model="newTodo" type="text">
       <br>
       <br>
-      <input v-model="message" type="text">
-      <br>
-      <br>
-      <!-- `greet` is the name of a method defined below -->
-      <button v-on:click="greet">Greet</button>
+      <button v-on:click="addTodo()">Add new todo</button>
+    </ol>
     </div>
   </body>
 </html>
