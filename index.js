@@ -1,19 +1,18 @@
-/* global Vue */
-
 var app = new Vue({
   el: "#app",
-  data: function () {
-    return {
-      message: "Hello from JavaScript!",
-      newTodo: "",
-      todos: ["mow the lawn", "feed the dog", "take out trash"],
-    };
+  data: {
+    message: "Hello Vue!",
+    guess: "",
   },
   methods: {
-    addTodo: function () {
-      console.log(this.newTodo);
-      this.todos.push(this.newTodo);
-      this.newTodo = "";
+    newGuess: function () {
+      var guess = "newGuess";
+      if (guess === 33) {
+        console.log("YOU WIN!");
+      }
+    },
+    reset: function () {
+      console.log("reset");
     },
   },
 });

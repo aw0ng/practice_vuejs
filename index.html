@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Practice Vue.js</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="index.js" defer></script>
-  </head>
-  <body>
-    <h1>To Do List</h1>
-    <div id="app">
-      <ol>
-      <li v-for="todo in todos">
-        {{ todo }}
-      </li>
-      <input v-model="newTodo" type="text">
-      <br>
-      <br>
-      <button v-on:click="addTodo()">Add new todo</button>
-    </ol>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <h1>Guess a number!</h1>
+    <div>
+      <input v-model="guess" type="text">
+      <button v-on:click="newGuess()">Submit</button>
+      <button v-on:click="reset()">Play again</button>
     </div>
-  </body>
+    <div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
 </html>
